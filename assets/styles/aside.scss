@@ -1,0 +1,33 @@
+aside {
+  @include flex-column;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  left: 0;
+  min-width: 350px;
+  max-height: calc(100vh - 70px);
+  background: $colorGradient;
+  border-right: 1px solid transparent;
+  box-shadow: -8px 18px 30px 4px rgba(0, 0, 0, 0.28), -8px 8px 16px rgba(0, 0, 0, 0.08), 0px 0px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 0 0 24px 0;
+  background: $colorGradient padding-box, $colorStrokeGradient border-box;
+  overflow: hidden;
+
+  .aside-content {
+    @include flex-column;
+    flex: 1 1 100%;
+    gap: 40px;
+    padding: 40px 20px;
+    overflow: auto;
+
+    .nav {
+      @include flex-column;
+      gap: 12px;
+    }
+
+    .bg-img {
+      min-height: 203px;
+      margin: 130px auto 100px;
+    }
+  }
+}
