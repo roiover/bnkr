@@ -1,0 +1,15 @@
+{
+  "title": "Gallery",
+  "description": "This is a gallery of uploaded images",
+  "images": [
+    {
+      "url": "https://chocolate-internal-scorpion-907.mypinata.cloud/ipfs/QmW1gQ4LNeqXRuTdeQrazZv7EKMX8RqyvJGZgGDBAjML9C"
+    },
+    {
+      "url": "https://chocolate-internal-scorpion-907.mypinata.cloud/ipfs/QmW1gQ4LNeqXRuTdeQrazZv7EKMX8RqyvJGZgGDBAjML9C"
+    },
+    {
+      "url": "https://chocolate-internal-scorpion-907.mypinata.cloud/ipfs/QmW1gQ4LNeqXRuTdeQrazZv7EKMX8RqyvJGZgGDBAjML9C"
+    }
+  ]
+}

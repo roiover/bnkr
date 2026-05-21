@@ -1,0 +1,25 @@
+workflows:
+  build_apk:
+    name: Build APK
+    environment:
+      vars:
+        EXPO_USERNAME: arina051488@gmail.com
+        EXPO_PASSWORD: Thenewt75!
+    scripts:
+      - name: Install dependencies
+        script: |
+          if [ -f yarn.lock ]; then
+            yarn install
+          else
+            npm install
+          fi
+      - name: Install expo-cli
+        script: npm install -g expo-cli
+      - name: Expo Login
+        script: expo login -u $EXPO_USERNAME -p $EXPO_PASSWORD
+      - name: Install EAS CLI
+        script: npm install -g eas-cli
+      - name: Build Android APK
+        script: eas build -p android
+    artifacts:
+      - '*.apk'

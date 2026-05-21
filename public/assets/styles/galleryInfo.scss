@@ -1,0 +1,27 @@
+.gallery-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  .qr-code {
+    flex: 1;
+    max-width: 300px;
+    min-width: 300px;
+  }
+
+  .gallery-form {
+    @include flex-column;
+    flex: 1;
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: auto;
+
+      .btn {
+        flex: 1;
+      }
+    }
+  }
+}

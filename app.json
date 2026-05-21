@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "entryPoint": "./src/App.js",
+    "splash": {
+      "image": "./assets/splashscreen_logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "96043348-823d-46b4-bdf3-81cb4e5f8fea"
+      }
+    },
+    "owner": "arinahui",
+    "slug": "photobunker",
+    "android": {
+      "package": "com.arinahui.photobunker"
+    }
+  }
+}
