@@ -1,0 +1,98 @@
+.gallery-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  @include screen-md {
+    position: relative;
+    gap: 20px;
+    padding-bottom: 55px;
+
+    textarea {
+      height: 172px;
+    }
+  }
+
+  @include screen-sm {
+    textarea {
+      height: 184px;
+    }
+  }
+
+  @include screen-sm {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .qr-code {
+    display: flex;
+    flex: 1;
+    max-width: 300px;
+    min-width: 300px;
+
+    @include screen-md {
+      max-width: 200px;
+      min-width: 200px;
+
+      svg {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    @include screen-sm {
+      max-width: 272px;
+      min-width: 272px;
+      margin: 0 auto;
+
+      svg {
+        width: 272px;
+        height: 272px;
+      }
+    }
+  }
+
+  .gallery-form {
+    @include flex-column;
+    flex: 1;
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: auto;
+
+      @include screen-md {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        gap: 20px;
+      }
+
+      @include screen-sm {
+        flex-direction: column;
+        position: unset;
+        gap: 12px;
+      }
+
+      .btn {
+        flex: 1 1 40%;
+
+        @include screen-sm {
+          &-primary {
+            width: 100%;
+            height: 60px;
+            font-size: 16px;
+            line-height: 22px;
+
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

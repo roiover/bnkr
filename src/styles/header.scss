@@ -1,0 +1,23 @@
+header {
+  display: none;
+
+  @include screen-tb {
+    @include flex-center-between;
+    padding: 32px 20px 40px;
+
+    .logo {
+      display: flex;
+    }
+
+    .btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

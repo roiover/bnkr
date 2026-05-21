@@ -1,0 +1,60 @@
+aside {
+  @include flex-column;
+  flex-wrap: wrap;
+  position: relative;
+  top: 0;
+  left: 0;
+  min-width: 350px;
+  height: 880px;
+  background: $colorGradient;
+  border-right: 1px solid transparent;
+  box-shadow: -8px 18px 30px 4px rgba(0, 0, 0, 0.28), -8px 8px 16px rgba(0, 0, 0, 0.08), 0px 0px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 0 0 24px 0;
+  background: $colorGradient padding-box, $colorStrokeGradient border-box;
+
+  @include screen-md {
+    width: 234px;
+    min-width: 234px;
+  }
+
+  @include screen-tb {
+    display: none;
+  }
+
+  .aside-content {
+    @include flex-column;
+    width: 100%;
+    height: 100%;
+    gap: 40px;
+    padding: 40px 20px;
+
+    @include screen-md {
+      gap: 33px;
+      padding: 34px 20px;
+
+      .logo {
+        svg {
+          width: 194px;
+        }
+      }
+    }
+
+    .logo {
+      display: flex;
+    }
+
+    .nav {
+      @include flex-column;
+      gap: 12px;
+    }
+
+    .bg-img {
+      min-height: 203px;
+      margin: 52px auto;
+    }
+
+    .btn {
+      margin-top: auto;
+    }
+  }
+}

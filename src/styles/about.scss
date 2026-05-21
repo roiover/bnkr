@@ -1,0 +1,122 @@
+.about {
+  p {
+    max-width: 620px;
+    margin-bottom: 40px;
+    color: $colorWhite;
+
+    @include screen-md {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    @include screen-sm {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .about-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    @include screen-md {
+      @include flex-column;
+    }
+
+    @include screen-sm {
+      gap: 12px;
+    }
+
+    .about-item {
+      @include flex-column;
+      height: 274px;
+      gap: 24px;
+      padding: 24px;
+      border-radius: 24px;
+      background: linear-gradient($colorBlueGray, $colorBlueGray) padding-box, $colorStrokeGradient border-box;
+      border: 1px solid transparent;
+
+      @include screen-md {
+        height: auto;
+
+        &:nth-child(3) {
+          background: linear-gradient($colorDarkGray, $colorDarkGray) padding-box, $colorStrokeGradient border-box;
+
+          .about-item-icon {
+            background: #C4ED31;
+            box-shadow: 0 4px 40px rgba(220, 250, 85, 0.3);
+          }
+        }
+
+        &:nth-child(4) {
+          &.--neon {
+            background: linear-gradient($colorBlueGray, $colorBlueGray) padding-box, $colorStrokeGradient border-box;
+
+            .about-item-icon {
+              background: $colorBodyGradient;
+              box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.18);
+            }
+          }
+        }
+      }
+
+      @include screen-sm {
+        gap: 16px;
+        padding: 16px;
+        border-radius: 12px;
+      }
+
+      &-head {
+        @include flex-center-y;
+        gap: 24px;
+        font-size: 32px;
+        line-height: 32px;
+        color: $colorWhite;
+
+        @include screen-sm {
+          @include flex-column;
+          align-items: flex-start;
+          gap: 8px;
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+
+      &-icon {
+        @include flex-center-center;
+        min-width: 106px;
+        height: 106px;
+        background: $colorBodyGradient;
+        box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.18);
+        border-radius: 16px;
+
+        @include screen-sm {
+          width: 100%;
+        }
+      }
+
+      &-caption {
+        padding-right: 54px;
+
+        @include screen-md {
+          padding-right: 0;
+        }
+
+        @include screen-sm {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+
+      &.--neon {
+        background: linear-gradient($colorDarkGray, $colorDarkGray) padding-box, $colorStrokeGradient border-box;
+
+        .about-item-icon {
+          background: #C4ED31;
+          box-shadow: 0 4px 40px rgba(220, 250, 85, 0.3);
+        }
+      }
+    }
+  }
+}

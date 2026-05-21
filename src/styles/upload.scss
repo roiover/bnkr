@@ -1,0 +1,273 @@
+.upload {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @include screen-md {
+    margin-top: -8px;
+  }
+
+  @include screen-sm {
+    gap: 24px;
+    margin-top: 0;
+  }
+
+  &-form {
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    position: relative;
+    flex: 1 1 100%;
+    max-width: 59.7%;
+    height: 358px;
+    padding: 24px;
+    background: $colorGradient;
+    box-shadow: -8px 18px 30px 4px rgba(0, 0, 0, 0.28), 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+    cursor: pointer;
+
+    @include screen-md {
+      max-width: 100%;
+      height: 292px;
+
+      svg {
+        width: 146px;
+        height: 146px;
+      }
+    }
+
+    @include screen-sm {
+      height: 170px;
+      padding: 14px;
+      border-radius: 12px;
+
+      svg {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .caption {
+      @include flex-column;
+      font-size: 20px;
+      line-height: 26px;
+      text-align: center;
+
+      @include screen-md {
+        flex-direction: row;
+        gap: 4px;
+        font-size: 18px;
+        line-height: 23px;
+      }
+
+      @include screen-sm {
+        display: none;
+      }
+
+      span {
+        color: $colorNeonGreen;
+      }
+    }
+
+    .hidden-lg {
+      display: none;
+
+      @include screen-sm {
+        display: block;
+        font-size: 16px;
+        line-height: 24px;
+        color: $colorNeonGreen;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 48px);
+      height: calc(100% - 48px);
+      border-radius: 24px;
+      border: 2px dashed rgba(245, 244, 243, 0.15);
+      content: '';
+
+      @include screen-sm {
+        width: calc(100% - 28px);
+        height: calc(100% - 28px);
+        border-radius: 6px;
+      }
+    }
+  }
+
+  &-settings {
+    @include flex-column;
+    flex: 1 1 auto;
+    gap: 24px;
+    padding: 32px 24px;
+    background: $colorGradient;
+    box-shadow: -8px 18px 30px 4px rgba(0, 0, 0, 0.28), 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+
+    @include screen-sm {
+      padding: 24px 16px;
+    }
+
+    .h2 {
+      position: relative;
+      padding-bottom: 24px;
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $colorStrokeGradient;
+        content: '';
+      }
+    }
+
+    .selects-list {
+      @include flex-column;
+      gap: 20px;
+
+      @include screen-md {
+        flex-direction: row;
+      }
+
+      @include screen-custom(880px) {
+        flex-direction: column;
+      }
+
+      .custom-select {
+        position: relative;
+        color: $colorWhite;
+
+        @include screen-md {
+          flex: 1;
+        }
+
+        .select-selected {
+          @include flex-center-between;
+          padding: 16px 24px;
+          background: linear-gradient($colorDarkGray, $colorDarkGray) padding-box, $colorStrokeGradient border-box;
+          border-radius: 16px;
+          border: 1px solid transparent;
+          transition: .3s ease;
+          cursor: pointer;
+          user-select: none;
+
+          &:after {
+            width: 24px;
+            height: 24px;
+            background: url(../img/chevron.svg) center center / auto no-repeat;
+            transition: .3s ease;
+            content: '';
+          }
+
+          &.select-arrow-active {
+            background: linear-gradient($colorBlueGray, $colorBlueGray) padding-box, $colorStrokeGradient border-box;
+
+            &:after {
+              rotate: 180deg;
+            }
+          }
+
+          &:hover {
+            background: linear-gradient($colorBlueGray, $colorBlueGray) padding-box, $colorStrokeGradient border-box;
+          }
+        }
+
+        .select-items {
+          display: flex;
+          position: absolute;
+          top: 110%;
+          left: 0;
+          right: 0;
+          max-height: 208px;
+          padding-right: 4px;
+          background: linear-gradient($colorDarkGray, $colorDarkGray) padding-box, $colorStrokeGradient border-box;
+          border-radius: 16px;
+          border: 1px solid transparent;
+          overflow: hidden;
+          transition: .3s ease;
+          z-index: 1;
+
+          &-list {
+            flex: 1;
+            padding-right: 4px;
+            overflow-y: auto;
+
+            div {
+              padding: 16px 24px;
+              transition: .3s ease;
+              cursor: pointer;
+
+              &:hover {
+                background: $colorBlueGray;
+              }
+
+              &.same-as-selected {
+                color: $colorNeonGreen;
+              }
+            }
+          }
+
+          &.select-hide {
+            top: 100%;
+            opacity: 0;
+            pointer-events: none;
+          }
+        }
+      }
+    }
+
+    .checkboxes-list {
+      @include flex-column;
+      gap: 16px;
+
+      @include screen-md {
+        flex-direction: row;
+      }
+
+      @include screen-custom(880px) {
+        flex-direction: column;
+      }
+
+      .checkbox-item {
+        @include flex-center-y;
+        gap: 20px;
+
+        @include screen-md {
+          flex: 1;
+        }
+
+        @include screen-sm {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        input[type=checkbox] + label {
+          @include flex-center-y;
+          gap: 20px;
+          color: $colorWhite;
+          cursor: pointer;
+
+          &:before {
+            width: 24px;
+            height: 24px;
+            background: url(../img/unchecked.svg) center center / 100% no-repeat;
+            content: '';
+          }
+        }
+
+        input[type=checkbox]:checked + label {
+          &:before {
+            background: url(../img/checked.svg) center center / 100% no-repeat;
+          }
+        }
+      }
+    }
+  }
+}

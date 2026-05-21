@@ -1,0 +1,23 @@
+.description {
+  gap: 40px;
+
+  @include screen-sm {
+    padding: 32px 24px;
+  }
+
+  &-item {
+    p {
+      max-width: 670px;
+
+      @include screen-md {
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      @include screen-sm {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

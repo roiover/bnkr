@@ -1,0 +1,29 @@
+.preloader-container {
+  @include flex-center-center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  gap: 40px;
+  background: $colorBodyGradient;
+
+  .animated-line {
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+    animation: draw 3s infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  span {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
