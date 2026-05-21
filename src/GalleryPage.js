@@ -7,7 +7,7 @@ import { PinataSDK } from "pinata";
 const PINATA_SECRET_API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJlZGE3OTU1ZS01NThhLTQ0YjItYmUwYS0xMmE5NTRhYmYxZGMiLCJlbWFpbCI6InJvaW92ZXJAcHJvdG9uLm1lIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBpbl9wb2xpY3kiOnsicmVnaW9ucyI6W3siZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjEsImlkIjoiRlJBMSJ9LHsiZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjEsImlkIjoiTllDMSJ9XSwidmVyc2lvbiI6MX0sIm1mYV9lbmFibGVkIjpmYWxzZSwic3RhdHVzIjoiQUNUSVZFIn0sImF1dGhlbnRpY2F0aW9uVHlwZSI6InNjb3BlZEtleSIsInNjb3BlZEtleUtleSI6ImIxYWRiNjVmMjdmZWNhMmIxY2RjIiwic2NvcGVkS2V5U2VjcmV0IjoiNmUzY2RjNmExNWU1YThhNWUxNTkwMmI5NGUwMWM1MjgyY2U0ODM3ODBhMWY0ZjcwMzQxYzI3NTFjYjVhNTlkZCIsImV4cCI6MTc2NDQxMjU3Nn0.FD15exn56ICeP46SOWpCXkOqpgsR1Evh9Cde9-xnUjI';  // Replace with your Infura Project Secret
 const pinata = new PinataSDK({
   pinataJwt: PINATA_SECRET_API_KEY,
-  pinataGateway: "https://files.photobunker.pro",
+  pinataGateway: "https://magenta-able-dormouse-779.mypinata.cloud",
 });
 const GalleryPage = () => {
   const { bunkerId } = useParams();
